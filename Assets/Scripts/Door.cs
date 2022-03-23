@@ -48,6 +48,10 @@ public class Door : MonoBehaviour
                 Debug.Log($"Dot: {dot.ToString("N3")}");
                 AnimationCoroutine = StartCoroutine(DoRotationOpen(dot));
             }
+            else
+            {
+                AnimationCoroutine = StartCoroutine(DoSlidingOpen()); 
+            }
         }
     }
 
